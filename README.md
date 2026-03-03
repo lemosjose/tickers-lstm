@@ -3,12 +3,6 @@
 ## Objetivo do Projeto
 O objetivo deste código é construir e avaliar um modelo de rede neural Long Short-Term Memory (LSTM) para prever os preços de fechamento futuros de diversas ações de tecnologia a partir `tickers` ma biblioteca yfinance. Utilizando dados financeiros históricos, nessa aplicação, com uma janela (`start_date`) em 2020-01-01
 
-## Aviso 
-
-yfinance utiliza webscraping (pela dependência beautifulsoup4), a execução pelo notebook do google colab é mais simples e provavelmente funcionará com mais tranquilidade. Além dos kernels, iPython e afins também facilitarem toda a questão de dependency hell, versões de Python, etc. Utilize o repositório como uma forma mais simples de revisar o código, por favor.
-
-E claro, é processamento (e nesse caso, especialmente de GPU) fornecido pela Google, em agradecimento, o ticker dela está na lista.
-
 ## Dependências
 As seguintes bibliotecas são necessárias para executar o notebook com sucesso:
 - `yfinance`
@@ -65,7 +59,7 @@ A rede neural baseia-se em uma arquitetura sequencial projetada especificamente 
 - Camada de Entrada: Aceita uma sequência de 30 preços de fechamento consecutivos.
 - Camada Oculta: Uma camada LSTM configurada com 50 unidades e uma função de ativação tangente hiperbólica (tanh).
 - Camada de Saída: Uma camada Dense com uma única unidade representando o preço numérico previsto.
-- Compilação: O modelo é compilado utilizando o otimizador Adam e minimiza a função de perda de Erro Quadrático Médio (MSE).
+- Compilação: O modelo é compilado utilizando o otimizador Adam e minimiza a função de perda de Erro Quadrático Médio (RMSE).
 
 ## Fluxo de Execução
 1. Os tickers alvo e o horizonte temporal são definidos.
