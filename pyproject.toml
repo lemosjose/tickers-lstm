@@ -1,0 +1,15 @@
+[project]
+name = "atividade01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+#tive que fugir do dependency hell ao tirar tudo do notebook do colab e passar pro setup local
+requires-python = ">=3.11, <3.12"
+dependencies = [
+    "tensorflow",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "yfinance",
+]
